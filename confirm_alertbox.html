@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h3>Tạo và gọi hàm, sử dụng confirm() method</h3>
+  <h4>Sử dụng hàm confirm để nhận thông tin đầu vào, trả về alertbox</h4>
+  <!-- Alert Box
+  An alert box is often used if you want to make sure information comes through to the user.
+  Confirm Box
+  A confirm box is often used if you want the user to verify or accept something.
+  When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.
+  If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false. -->
+    <script>
+      function processconfirm() {
+        var text;
+        let str = document.getElementById("input_txt").value;
+        if (str) {
+            alert("Excellent. We'll play a nice game of chess."); /*
+            string thì có thể đặt trong cả nháy đơn / nháy kép nhưng khi trong chuỗi có dấu nháy đơn thì bọc trong nháy kép */
+        } else {
+            alert('Maybe later then.');
+        }
+        // return text; để return ở đây thì các câu lệnh sau không hoạt động
+        // một điểm sai nữa là đang đặt innerHTML ở ngoài hàm thì khi gọi hàm không trả về là đúng rồi
+        
+      }
+      
+    </script>
+
+</head>
+<body>
+     <p>Thông tin đầu vào kiểm tra: <input type="text" id="input_txt"></p>
+     <button type="button" onclick="processconfirm();">Check input</button>
+
+</body>
+
+</html>
